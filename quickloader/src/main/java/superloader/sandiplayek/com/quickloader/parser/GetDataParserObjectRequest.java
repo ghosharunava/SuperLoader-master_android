@@ -145,9 +145,9 @@ public class GetDataParserObjectRequest {
 
     //................................................................................................................
     //................................................................................................................
-    public GetDataParserObjectRequest(final Context context, String url, String oAuthCode, final boolean flag, final View view, final OnGetObjectResponseListner listner) {
+    public GetDataParserObjectRequest(final Context context, String url, String oAuthCode, final boolean flag, final OnGetObjectResponseListner listner) {
         if (!Util.isConnected(context)) {
-            Util.showSnakBar(context,context.getResources().getString(R.string.internectconnectionerror),view);
+            Util.showSnakBar(context,context.getResources().getString(R.string.internectconnectionerror));
             //TastyToast.makeText(context, "No internet connections.", TastyToast.LENGTH_SHORT, TastyToast.ERROR);
             listner.onGetObjectResponse(null);
             return;
@@ -177,7 +177,7 @@ public class GetDataParserObjectRequest {
             public void onErrorResponse(VolleyError error) {
                 if (flag)
                     hidepDialog();
-                Util.showSnakBar(context,context.getResources().getString(R.string.networkerror),view);
+                Util.showSnakBar(context,context.getResources().getString(R.string.networkerror));
                 listner.onGetObjectResponse(null);
                 VolleyLog.d("Error: " + error.getMessage());
                 //TastyToast.makeText(context, "Network error.", TastyToast.LENGTH_SHORT, TastyToast.ERROR);
