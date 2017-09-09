@@ -240,7 +240,7 @@ public class Util {
         Picasso.with(context).load(url).placeholder(R.drawable.ic_warning).error(R.drawable.ic_warning).into(imageView);
     }
 
-    private void SaveIamge(Context context,Bitmap finalBitmap,String folder_name,String file_name) {
+    private static void SaveIamge(Context context,Bitmap finalBitmap,String folder_name,String file_name) {
         String root = Environment.getExternalStorageDirectory().toString();
         File myDir = new File(root + "/" + folder_name);
         myDir.mkdirs();
