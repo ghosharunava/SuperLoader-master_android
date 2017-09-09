@@ -312,7 +312,11 @@ We normally write.
     android:text="&#xf156;"
     android:layout_marginRight="3dp"/>
 ```
-* 25. Single permission granter
+* 25. After capturing save image to your storage.
+```sh
+Util.SaveIamge(Context context,Bitmap finalBitmap,String folder_name,String file_name);
+```
+* 26. Single permission granter
 ```sh
     new SinglePremissionGranter(MainActivity.this, 99, new SinglePremissionGranter.GetPermissionResult() {
         @Override
